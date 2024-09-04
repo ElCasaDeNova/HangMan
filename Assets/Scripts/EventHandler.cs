@@ -1,29 +1,41 @@
 using System.Collections.Generic;
 using System.Text;
-using Unity.VisualScripting.Antlr3.Runtime;
+using TMPro;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class EventHandler : MonoBehaviour
 {
 
     [SerializeField]
-    private List<string> listOfWord;
+    private List<string> listOfWords;
 
     private string wordToGuess;
-    private StringBuilder wordToShow;
 
+    private StringBuilder wordToShow;
 
     [SerializeField]
     private float lifePoint;
 
+    [SerializeField]
+    private TextMeshProUGUI wordDisplayText;
+
+    [SerializeField]
+    private float characterSpacing = 10f;
+
     // Start is called before the first frame update
     void Start()
     {
-        wordToGuess = listOfWord[Random.Range(0, listOfWord.Count)];
+        wordToGuess = listOfWords[Random.Range(0, listOfWords.Count)];
         Debug.Log("the word to guess is " + wordToGuess);
         wordToShow = new StringBuilder(new string('_', wordToGuess.Length));
         Debug.Log("the word to show is " + wordToShow);
+
+        //Display the Word
+        if (wordDisplayText != null)
+        {
+            wordDisplayText.text = wordToShow.ToString();
+            wordDisplayText.characterSpacing = characterSpacing;
+        }
     }
 
     // Function Called by the Buttons
@@ -44,18 +56,25 @@ public class EventHandler : MonoBehaviour
         Debug.Log("Good Answer");
         // Get A list of each position of the letter in the word
         List<int> positions = FindAllIndexes(wordToGuess, letter);
-        Debug.Log("The positions are "+ positions);
+        Debug.Log("The positions are " + positions);
         Debug.Log("The letter is " + letter);
 
         // Replace the _ of the Word Displayed with the Guessed letter
         foreach (int pos in positions)
         {
             wordToShow[pos] = letter;
-            Debug.Log("The Word in position  " + pos +" was "+ wordToShow[pos]+" and become "+letter);
+            Debug.Log("The Word in position  " + pos + " was " + wordToShow[pos] + " and become " + letter);
         }
         Debug.Log("The Word is " + wordToShow);
 
-        if (wordToShow.Equals(wordToGuess)) {
+        // Update the Screen
+        if (wordDisplayText != null)
+        {
+            wordDisplayText.text = wordToShow.ToString();
+        }
+
+        if (wordToShow.Equals(wordToGuess))
+        {
             Debug.Log("You win");
         }
     }
