@@ -162,7 +162,8 @@ public class EventHandler : MonoBehaviour
         }
     }
 
-    private void UpdateScreen(string wordToDisplay) {
+    private void UpdateScreen(string wordToDisplay)
+    {
         // Display the Word
         if (wordDisplayText != null)
         {

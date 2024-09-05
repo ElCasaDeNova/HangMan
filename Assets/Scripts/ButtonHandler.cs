@@ -29,6 +29,6 @@ public class ButtonHandler : MonoBehaviour
     {
         // DisableButton
         guessButton.interactable = false;
-        eventHandler.Guess(letter);    
+        eventHandler.Guess(letter);
     }
 }
