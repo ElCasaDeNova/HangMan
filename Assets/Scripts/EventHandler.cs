@@ -81,7 +81,7 @@ public class EventHandler : MonoBehaviour
             wordToShow[pos] = letter;
         }
 
-        UpdateScreen();
+        UpdateScreen(wordToShow.ToString());
 
         if (wordToShow.Equals(wordToGuess))
         {
@@ -101,7 +101,7 @@ public class EventHandler : MonoBehaviour
         else
         {
             Debug.Log("You have lost a Life Point. You still have " + currentLifePoint);
-            UpdateScreen();
+            UpdateScreen(wordToShow.ToString());
         }
     }
 
@@ -122,7 +122,7 @@ public class EventHandler : MonoBehaviour
 
         Debug.Log("the word to guess is " + wordToGuess);
 
-        UpdateScreen();
+        UpdateScreen(wordToShow.ToString());
         ActivateButtons();
     }
 
@@ -136,11 +136,8 @@ public class EventHandler : MonoBehaviour
 
     private IEnumerator LoseCoroutine()
     {
-        // Display the Word
-        if (wordDisplayText != null)
-        {
-            wordDisplayText.text = " Game Over";
-        }
+        // Display Game Over
+        UpdateScreen("Game Over");
         DisableButtons();
         yield return new WaitForSeconds(waitLoseTime); // in seconds
 
@@ -165,11 +162,11 @@ public class EventHandler : MonoBehaviour
         }
     }
 
-    private void UpdateScreen() {
+    private void UpdateScreen(string wordToDisplay) {
         // Display the Word
         if (wordDisplayText != null)
         {
-            wordDisplayText.text = wordToShow.ToString();
+            wordDisplayText.text = wordToDisplay;
         }
 
         // Display the Life Points
