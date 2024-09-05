@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,20 +13,22 @@ public class ButtonHandler : MonoBehaviour
     [SerializeField]
     private EventHandler eventHandler;
 
+    private TMP_Text buttonText;
+
     void Start()
     {
-        // Assure-toi que le bouton est assigné
+        buttonText = guessButton.GetComponentInChildren<TMP_Text>();
+
         if (guessButton != null)
         {
             guessButton.onClick.AddListener(OnStartButtonClick);
         }
+    }
 
-        void OnStartButtonClick()
-        {
-            eventHandler.Guess(letter);
-
-            // TODO setActive false This Button
-            // TODO setActive True NoneWorking button
-        }
+    void OnStartButtonClick()
+    {
+        // DisableButton
+        guessButton.interactable = false;
+        eventHandler.Guess(letter);
     }
 }

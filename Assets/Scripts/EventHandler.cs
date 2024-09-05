@@ -1,29 +1,59 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Text;
-using Unity.VisualScripting.Antlr3.Runtime;
+using TMPro;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
+using UnityEngine.UI;
 
 public class EventHandler : MonoBehaviour
 {
 
     [SerializeField]
-    private List<string> listOfWord;
+    private List<string> listOfWords;
+    private List<string> currentlistOfWords;
 
     private string wordToGuess;
+
     private StringBuilder wordToShow;
 
+    [SerializeField]
+    private float maxLifePoint;
+    private float currentLifePoint;
 
     [SerializeField]
-    private float lifePoint;
+    private TextMeshProUGUI wordDisplayText;
+
+    [SerializeField]
+    private TextMeshProUGUI currentLifePointText;
+
+    [SerializeField]
+    private float characterSpacing = 10f;
+
+    [SerializeField]
+    private GameObject buttons;
+
+    [SerializeField]
+    private float waitWinTime = 0.2f;
+    [SerializeField]
+    private float waitLoseTime = 1f;
+
+    // Random Number to Select a Word from the List
+    private int randomPick;
+    private int nbRoundWon = 0;
+    private int nbRoundToWin;
 
     // Start is called before the first frame update
     void Start()
     {
-        wordToGuess = listOfWord[Random.Range(0, listOfWord.Count)];
-        Debug.Log("the word to guess is " + wordToGuess);
-        wordToShow = new StringBuilder(new string('_', wordToGuess.Length));
-        Debug.Log("the word to show is " + wordToShow);
+        // Adapt Spacing
+        if (wordDisplayText != null)
+        {
+            wordDisplayText.characterSpacing = characterSpacing;
+        }
+
+        currentlistOfWords = listOfWords;
+        nbRoundToWin = currentlistOfWords.Count;
+        SetRound();
     }
 
     // Function Called by the Buttons
@@ -44,30 +74,106 @@ public class EventHandler : MonoBehaviour
         Debug.Log("Good Answer");
         // Get A list of each position of the letter in the word
         List<int> positions = FindAllIndexes(wordToGuess, letter);
-        Debug.Log("The positions are "+ positions);
-        Debug.Log("The letter is " + letter);
 
         // Replace the _ of the Word Displayed with the Guessed letter
         foreach (int pos in positions)
         {
             wordToShow[pos] = letter;
-            Debug.Log("The Word in position  " + pos +" was "+ wordToShow[pos]+" and become "+letter);
         }
-        Debug.Log("The Word is " + wordToShow);
 
-        if (wordToShow.Equals(wordToGuess)) {
-            Debug.Log("You win");
+        UpdateScreen(wordToShow.ToString());
+
+        if (wordToShow.Equals(wordToGuess))
+        {
+            StartCoroutine(WinCoroutine());
         }
     }
 
     private void BadAnswer(char letter)
     {
         Debug.Log("Wrong Answer");
-        lifePoint--;
-        Debug.Log("You have lost a Life Point. You still have " + lifePoint);
-        if (lifePoint <= 0)
+        currentLifePoint--;
+
+        if (currentLifePoint <= 0)
         {
-            Debug.Log("Game Over");
+            StartCoroutine(LoseCoroutine());
+        }
+        else
+        {
+            Debug.Log("You have lost a Life Point. You still have " + currentLifePoint);
+            UpdateScreen(wordToShow.ToString());
+        }
+    }
+
+    private void SetRound()
+    {
+        // Set Current Life Poitns
+        currentLifePoint = maxLifePoint;
+
+        // Select a Word to Guess from List
+        randomPick = Random.Range(0, currentlistOfWords.Count);
+        wordToGuess = currentlistOfWords[randomPick];
+
+        // Remove Word to Guess from List
+        currentlistOfWords.RemoveAt(randomPick);
+
+        // Generate Word to Show
+        wordToShow = new StringBuilder(new string('_', wordToGuess.Length));
+
+        Debug.Log("the word to guess is " + wordToGuess);
+
+        UpdateScreen(wordToShow.ToString());
+        ActivateButtons();
+    }
+
+    private IEnumerator WinCoroutine()
+    {
+        yield return new WaitForSeconds(waitWinTime); // in seconds
+        nbRoundWon++;
+        Debug.Log("Round " + nbRoundWon + " on " + nbRoundToWin);
+        SetRound();
+    }
+
+    private IEnumerator LoseCoroutine()
+    {
+        // Display Game Over
+        UpdateScreen("Game Over");
+        DisableButtons();
+        yield return new WaitForSeconds(waitLoseTime); // in seconds
+
+        currentlistOfWords = listOfWords;
+        nbRoundWon = 0;
+        SetRound();
+    }
+
+    private void DisableButtons()
+    {
+        foreach (Button button in buttons.GetComponentsInChildren<Button>())
+        {
+            button.interactable = false;
+        }
+    }
+
+    private void ActivateButtons()
+    {
+        foreach (Button button in buttons.GetComponentsInChildren<Button>())
+        {
+            button.interactable = true;
+        }
+    }
+
+    private void UpdateScreen(string wordToDisplay)
+    {
+        // Display the Word
+        if (wordDisplayText != null)
+        {
+            wordDisplayText.text = wordToDisplay;
+        }
+
+        // Display the Life Points
+        if (currentLifePointText != null)
+        {
+            currentLifePointText.text = currentLifePoint.ToString();
         }
     }
 
