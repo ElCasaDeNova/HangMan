@@ -13,6 +13,7 @@ public class EventHandler : MonoBehaviour
     private List<string> currentlistOfWords;
 
     private string wordToGuess;
+    private List<int> spacePositions;
 
     private StringBuilder wordToShow;
 
@@ -119,6 +120,7 @@ public class EventHandler : MonoBehaviour
 
         // Generate Word to Show
         wordToShow = new StringBuilder(new string('_', wordToGuess.Length));
+        AddSpace();
 
         Debug.Log("the word to guess is " + wordToGuess);
 
@@ -144,6 +146,20 @@ public class EventHandler : MonoBehaviour
         currentlistOfWords = listOfWords;
         nbRoundWon = 0;
         SetRound();
+    }
+
+    // Show Space characters in the Word to Show
+    private void AddSpace()
+    {
+        if (wordToGuess.Contains(' '))
+        {
+            spacePositions = FindAllIndexes(wordToGuess, ' ');
+            // Replace the _ of the Word Displayed with the Guessed letter
+            foreach (int pos in spacePositions)
+            {
+                wordToShow[pos] = ' ';
+            }
+        }
     }
 
     private void DisableButtons()
