@@ -100,7 +100,7 @@ public class EventHandler : MonoBehaviour
                 StartCoroutine(WinGameCoroutine());
             }
             else {
-                StartCoroutine(WinRoundCoroutine());
+                SetRound();
             }
         }
     }
@@ -162,17 +162,7 @@ public class EventHandler : MonoBehaviour
 
         Debug.Log("the word to guess is " + wordToGuess);
 
-        UpdateScreen(wordToShow.ToString());
-        ActivateButtons();
-    }
-
-    private IEnumerator WinRoundCoroutine()
-    {
-        DisableButtons();
-        nbRoundWon++;
-        UpdateScreen("Round " + nbRoundWon + " on " + nbRoundToWin);
-        yield return new WaitForSeconds(waitWinTime); // in seconds
-        SetRound();
+        StartCoroutine(ShowRoundAndThenWord());
     }
 
     private IEnumerator WinGameCoroutine()
@@ -190,9 +180,6 @@ public class EventHandler : MonoBehaviour
         // Display Warning Message
         UpdateScreen("You've lost a Life");
         yield return new WaitForSeconds(waitLoseTime); // in seconds
-        nbRoundWon++;
-        UpdateScreen("Round " + nbRoundWon + " on " + nbRoundToWin);
-        yield return new WaitForSeconds(waitWinTime); // in seconds
 
         SetRound();
     }
@@ -206,6 +193,20 @@ public class EventHandler : MonoBehaviour
         currentlistOfWords = listOfWords;
         nbRoundWon = 0;
         SetRound();
+    }
+
+    private IEnumerator ShowRoundAndThenWord()
+    {
+        DisableButtons();
+        nbRoundWon++;
+        UpdateScreen("Round " + nbRoundWon + " on " + nbRoundToWin);
+
+        // Wait for a moment so the player can see the round info
+        yield return new WaitForSeconds(waitWinTime);
+
+        // Then show the word to guess
+        UpdateScreen(wordToShow.ToString());
+        ActivateButtons();
     }
 
 
