@@ -126,7 +126,7 @@ public class EventHandler : MonoBehaviour
             if (currentLifePoint <= 0)
             {
                 // If No more Life Points then Round is lost
-                StartCoroutine(LoseGameCoroutine());
+                LoseGame();
             }
             else
             {
@@ -192,7 +192,7 @@ public class EventHandler : MonoBehaviour
         SetRound();
     }
 
-    private IEnumerator LoseGameCoroutine()
+    private void LoseGame()
     {
         DisableButtons();
 
@@ -200,11 +200,6 @@ public class EventHandler : MonoBehaviour
         animator.SetTrigger("LoseGame");
 
         UpdateScreen("Game Over");
-        yield return new WaitForSeconds(waitLoseTime); // in seconds
-
-        currentlistOfWords = listOfWords;
-        nbRoundWon = 0;
-        SetRound();
     }
 
     private IEnumerator LoseRoundCoroutine()
