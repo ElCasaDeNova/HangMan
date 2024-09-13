@@ -45,6 +45,9 @@ public class EventHandler : MonoBehaviour
     [SerializeField]
     HealthBar HealthBar;
 
+    [SerializeField]
+    private Animator animator;
+
     // Random Number to Select a Word from the List
     private int randomPick;
     private int nbRoundWon = 0;
@@ -99,8 +102,9 @@ public class EventHandler : MonoBehaviour
             {
                 StartCoroutine(WinGameCoroutine());
             }
-            else {
-                SetRound();
+            else
+            {
+                WinRound();
             }
         }
     }
@@ -168,18 +172,22 @@ public class EventHandler : MonoBehaviour
     private IEnumerator WinGameCoroutine()
     {
         DisableButtons();
+
+        // Run Animation
+        animator.SetTrigger("WinGame");
+
         UpdateScreen("VICTORY");
         yield return new WaitForSeconds(waitWinTime); // in seconds
 
         // TODO Load Next Scene
     }
 
-    private IEnumerator LoseRoundCoroutine()
+    private void WinRound()
     {
         DisableButtons();
-        // Display Warning Message
-        UpdateScreen("You've lost a Life");
-        yield return new WaitForSeconds(waitLoseTime); // in seconds
+
+        // Run Animation
+        animator.SetTrigger("WinRound");
 
         SetRound();
     }
@@ -187,11 +195,29 @@ public class EventHandler : MonoBehaviour
     private IEnumerator LoseGameCoroutine()
     {
         DisableButtons();
+
+        // Run Animation
+        animator.SetTrigger("LoseGame");
+
         UpdateScreen("Game Over");
         yield return new WaitForSeconds(waitLoseTime); // in seconds
 
         currentlistOfWords = listOfWords;
         nbRoundWon = 0;
+        SetRound();
+    }
+
+    private IEnumerator LoseRoundCoroutine()
+    {
+        DisableButtons();
+
+        // Run Animation
+        animator.SetTrigger("LoseRound");
+
+        // Display Warning Message
+        UpdateScreen("You've lost a Life");
+        yield return new WaitForSeconds(waitLoseTime); // in seconds
+
         SetRound();
     }
 
