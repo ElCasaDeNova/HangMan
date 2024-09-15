@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: f49f842cca5901c4b99598f8155b5aa6
+guid: 515a4c25008db0046ae9ed3f969bd16c
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -33,11 +33,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Getting Up
+      name: Left Turn
       takeName: mixamo.com
       internalID: -203655887218126122
       firstFrame: 0
-      lastFrame: 455
+      lastFrame: 56
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -213,6 +213,10 @@ public class EventHandler : MonoBehaviour
         UpdateScreen("You've lost a Life");
         yield return new WaitForSeconds(waitLoseTime); // in seconds
 
+        // Display Nothing for a pause
+        UpdateScreen("");
+        yield return new WaitForSeconds(waitLoseTime); // in seconds
+
         SetRound();
     }
 

@@ -7700,7 +7700,7 @@ MonoBehaviour:
   characterSpacing: 10
   buttons: {fileID: 1735984539}
   waitWinTime: 0.45
-  waitLoseTime: 1
+  waitLoseTime: 2
   HealthBar: {fileID: 1008504973}
   animator: {fileID: 2114834401}
 --- !u!1 &1617219307
