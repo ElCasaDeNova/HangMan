@@ -13,8 +13,13 @@ public class EventHandler : MonoBehaviour
     private List<string> currentlistOfWords;
 
     private string wordToGuess;
+    private List<int> spacePositions;
 
     private StringBuilder wordToShow;
+
+    [SerializeField]
+    private float maxChances;
+    private float chancesLeft;
 
     [SerializeField]
     private float maxLifePoint;
@@ -24,7 +29,7 @@ public class EventHandler : MonoBehaviour
     private TextMeshProUGUI wordDisplayText;
 
     [SerializeField]
-    private TextMeshProUGUI currentLifePointText;
+    private TextMeshProUGUI chancesLeftText;
 
     [SerializeField]
     private float characterSpacing = 10f;
@@ -36,6 +41,12 @@ public class EventHandler : MonoBehaviour
     private float waitWinTime = 0.2f;
     [SerializeField]
     private float waitLoseTime = 1f;
+
+    [SerializeField]
+    HealthBar HealthBar;
+
+    [SerializeField]
+    private Animator animator;
 
     // Random Number to Select a Word from the List
     private int randomPick;
@@ -51,6 +62,7 @@ public class EventHandler : MonoBehaviour
             wordDisplayText.characterSpacing = characterSpacing;
         }
 
+        currentLifePoint = maxLifePoint;
         currentlistOfWords = listOfWords;
         nbRoundToWin = currentlistOfWords.Count;
         SetRound();
@@ -85,30 +97,61 @@ public class EventHandler : MonoBehaviour
 
         if (wordToShow.Equals(wordToGuess))
         {
-            StartCoroutine(WinCoroutine());
+            // Verify Winning Condition
+            if (currentlistOfWords.Count <= 0)
+            {
+                StartCoroutine(WinGameCoroutine());
+            }
+            else
+            {
+                WinRound();
+            }
         }
     }
 
     private void BadAnswer(char letter)
     {
         Debug.Log("Wrong Answer");
-        currentLifePoint--;
+        chancesLeft--;
 
-        if (currentLifePoint <= 0)
+        // If too many errors
+        if (chancesLeft <= 0)
         {
-            StartCoroutine(LoseCoroutine());
+            // Lose a Life
+            currentLifePoint--;
+            HealthBar.LoseLife();
+
+            Debug.Log("You have lost a life point. You still have " + currentLifePoint);
+
+            if (currentLifePoint <= 0)
+            {
+                // If No more Life Points then Round is lost
+                LoseGame();
+            }
+            else
+            {
+                // Verify Winning Condition
+                if (currentlistOfWords.Count <= 0)
+                {
+                    StartCoroutine(WinGameCoroutine());
+                }
+                else
+                {
+                    StartCoroutine(LoseRoundCoroutine());
+                }
+            }
         }
         else
         {
-            Debug.Log("You have lost a Life Point. You still have " + currentLifePoint);
+            Debug.Log("You have lost a chance. You still have " + chancesLeft);
             UpdateScreen(wordToShow.ToString());
         }
     }
 
     private void SetRound()
     {
-        // Set Current Life Poitns
-        currentLifePoint = maxLifePoint;
+        // Set number of Chances
+        chancesLeft = maxChances;
 
         // Select a Word to Guess from List
         randomPick = Random.Range(0, currentlistOfWords.Count);
@@ -119,31 +162,91 @@ public class EventHandler : MonoBehaviour
 
         // Generate Word to Show
         wordToShow = new StringBuilder(new string('_', wordToGuess.Length));
+        AddSpace();
 
         Debug.Log("the word to guess is " + wordToGuess);
 
+        StartCoroutine(ShowRoundAndThenWord());
+    }
+
+    private IEnumerator WinGameCoroutine()
+    {
+        DisableButtons();
+
+        // Run Animation
+        animator.SetTrigger("WinGame");
+
+        UpdateScreen("VICTORY");
+        yield return new WaitForSeconds(waitWinTime); // in seconds
+
+        // TODO Load Next Scene
+    }
+
+    private void WinRound()
+    {
+        DisableButtons();
+
+        // Run Animation
+        animator.SetTrigger("WinRound");
+
+        SetRound();
+    }
+
+    private void LoseGame()
+    {
+        DisableButtons();
+
+        // Run Animation
+        animator.SetTrigger("LoseGame");
+
+        UpdateScreen("Game Over");
+    }
+
+    private IEnumerator LoseRoundCoroutine()
+    {
+        DisableButtons();
+
+        // Run Animation
+        animator.SetTrigger("LoseRound");
+
+        // Display Warning Message
+        UpdateScreen("You've lost a Life");
+        yield return new WaitForSeconds(waitLoseTime); // in seconds
+
+        // Display Nothing for a pause
+        UpdateScreen("");
+        yield return new WaitForSeconds(waitLoseTime); // in seconds
+
+        SetRound();
+    }
+
+    private IEnumerator ShowRoundAndThenWord()
+    {
+        DisableButtons();
+        nbRoundWon++;
+        UpdateScreen("Round " + nbRoundWon + " on " + nbRoundToWin);
+
+        // Wait for a moment so the player can see the round info
+        yield return new WaitForSeconds(waitWinTime);
+
+        // Then show the word to guess
         UpdateScreen(wordToShow.ToString());
         ActivateButtons();
     }
 
-    private IEnumerator WinCoroutine()
-    {
-        yield return new WaitForSeconds(waitWinTime); // in seconds
-        nbRoundWon++;
-        Debug.Log("Round " + nbRoundWon + " on " + nbRoundToWin);
-        SetRound();
-    }
 
-    private IEnumerator LoseCoroutine()
+    // Show Space characters in the Word to Show
+    private void AddSpace()
     {
-        // Display Game Over
-        UpdateScreen("Game Over");
-        DisableButtons();
-        yield return new WaitForSeconds(waitLoseTime); // in seconds
-
-        currentlistOfWords = listOfWords;
-        nbRoundWon = 0;
-        SetRound();
+        if (wordToGuess.Contains(' '))
+        {
+            spacePositions = FindAllIndexes(wordToGuess, ' ');
+            // Replace the _ of the Word Displayed with the Guessed letter
+            foreach (int pos in spacePositions)
+            {
+                wordToShow[pos] = ' ';
+            }
+        }
     }
 
     private void DisableButtons()
@@ -171,9 +274,9 @@ public class EventHandler : MonoBehaviour
         }
 
         // Display the Life Points
-        if (currentLifePointText != null)
+        if (chancesLeftText != null)
         {
-            currentLifePointText.text = currentLifePoint.ToString();
+            chancesLeftText.text = chancesLeft.ToString();
         }
     }
 
