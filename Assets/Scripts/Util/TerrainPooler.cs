@@ -20,7 +20,7 @@ public class TerrainPooler : MonoBehaviour
         }
     }
 
-    // Function to get the next terrain from the pool and activate it
+    // Function to get the next terrain from the pool
     public GameObject GetNextTerrain()
     {
         if (terrainPool.Count > 0)

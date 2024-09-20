@@ -15,7 +15,6 @@ public class TerrainCollisionDetector : MonoBehaviour
             // Deactivate previous terrain and return it to the pool
             if (previousTerrain != null)
             {
-                previousTerrain.SetActive(false);
                 pooler.ReturnTerrainToPool(previousTerrain);
             }
 
