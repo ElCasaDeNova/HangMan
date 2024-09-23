@@ -3027,67 +3027,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 663729870}
   m_CullTransparentMesh: 1
---- !u!1001 &678045157
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 567592249845758061, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: animator
-      value: 
-      objectReference: {fileID: 2114834401}
-    - target: {fileID: 8207654846928681783, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_Name
-      value: InteractiveBranch
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.4830475
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.00000023841858
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.5747037
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -95
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8207654846928906007, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
 --- !u!1 &749544541
 GameObject:
   m_ObjectHideFlags: 0
@@ -8043,7 +7982,7 @@ MonoBehaviour:
   - marcheur
   - allure
   - sentier pedestre
-  maxChances: 1
+  maxChances: 8
   maxLifePoint: 3
   wordDisplayText: {fileID: 464594708}
   chancesLeftText: {fileID: 1718444896}
@@ -8054,7 +7993,9 @@ MonoBehaviour:
   HealthBar: {fileID: 1008504973}
   animator: {fileID: 2114834401}
   player: {fileID: 2114834406}
-  prefabToSpawn: {fileID: 8207654846928681783, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
+  loseRoundPrefab: {fileID: 8207654846928681783, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
+  loseGamePrefab: {fileID: 5986916407575342737, guid: 12e105cb5e00817468fc1701a59257da, type: 3}
+  winRoundPrefab: {fileID: 4769937728281149654, guid: bac5d4374f2d16f439a52e68199d5173, type: 3}
   spawnDistanceX: 6
 --- !u!1 &1617219307
 GameObject:
@@ -10646,4 +10587,3 @@ SceneRoots:
   - {fileID: 1493809692}
   - {fileID: 65155502}
   - {fileID: 1795556296}
-  - {fileID: 678045157}

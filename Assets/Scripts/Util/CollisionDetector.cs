@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class BranchCollisionDetector : MonoBehaviour
+public class CollisionDetector : MonoBehaviour
 {
     public Animator animator;
+    public string triggerName;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("Branch Triggered");
+            Debug.Log("Animation Triggered");
             // Run Animation
-            animator.SetTrigger("LoseRound");
+            animator.SetTrigger(triggerName);
         }
     }
 }

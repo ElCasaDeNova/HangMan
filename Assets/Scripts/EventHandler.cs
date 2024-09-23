@@ -55,7 +55,9 @@ public class EventHandler : MonoBehaviour
 
     // For Animator
     [SerializeField] private Transform player;
-    [SerializeField] private GameObject prefabToSpawn;
+    [SerializeField] private GameObject winRoundPrefab;
+    [SerializeField] private GameObject loseRoundPrefab;
+    [SerializeField] private GameObject loseGamePrefab;
     [SerializeField] private float spawnDistanceX = 6f;
 
     // Start is called before the first frame update
@@ -191,8 +193,8 @@ public class EventHandler : MonoBehaviour
     {
         DisableButtons();
 
-        // Run Animation
-        animator.SetTrigger("WinRound");
+        // Generate Win Round Animation Interaction
+        SpawnObject(winRoundPrefab, "WinRound", spawnDistanceX);
 
         SetRound();
     }
@@ -201,8 +203,8 @@ public class EventHandler : MonoBehaviour
     {
         DisableButtons();
 
-        // Run Animation
-        animator.SetTrigger("LoseGame");
+        // Generate Lose Game Animation Interaction
+        SpawnObject(loseGamePrefab, "LoseGame", spawnDistanceX+4);
 
         UpdateScreen("Game Over");
     }
@@ -211,8 +213,8 @@ public class EventHandler : MonoBehaviour
     {
         DisableButtons();
 
-        // Generate Lose Animation Interaction
-        SpawnObject();
+        // Generate Lose Round Animation Interaction
+        SpawnObject(loseRoundPrefab, "LoseRound", spawnDistanceX);
 
         // Display Warning Message
         UpdateScreen("You've lost a Life");
@@ -301,17 +303,18 @@ public class EventHandler : MonoBehaviour
         return indexes;
     }
 
-    void SpawnObject()
+    void SpawnObject(GameObject prefab, string triggerName, float spawnX)
     {
-        if (prefabToSpawn != null && player != null)
+        if (prefab != null && player != null)
         {
-            Vector3 spawnPosition = new Vector3(player.position.x + spawnDistanceX, player.position.y, player.position.z);
-            GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+            Vector3 spawnPosition = new Vector3(player.position.x + spawnX, player.position.y, player.position.z);
+            GameObject spawnedObject = Instantiate(prefab, spawnPosition, Quaternion.identity);
 
-            BranchCollisionDetector branchCollisionDetector = spawnedObject.GetComponent<BranchCollisionDetector>();
+            CollisionDetector branchCollisionDetector = spawnedObject.GetComponent<CollisionDetector>();
             if (branchCollisionDetector != null && animator != null)
             {
                 branchCollisionDetector.animator = animator;
+                branchCollisionDetector.triggerName = triggerName;
             }
         }
         else
