@@ -53,6 +53,11 @@ public class EventHandler : MonoBehaviour
     private int nbRoundWon = 0;
     private int nbRoundToWin;
 
+    // For Animator
+    [SerializeField] private Transform player;
+    [SerializeField] private GameObject prefabToSpawn;
+    [SerializeField] private float spawnDistanceX = 6f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -206,8 +211,8 @@ public class EventHandler : MonoBehaviour
     {
         DisableButtons();
 
-        // Run Animation
-        animator.SetTrigger("LoseRound");
+        // Generate Lose Animation Interaction
+        SpawnObject();
 
         // Display Warning Message
         UpdateScreen("You've lost a Life");
@@ -296,4 +301,22 @@ public class EventHandler : MonoBehaviour
         return indexes;
     }
 
+    void SpawnObject()
+    {
+        if (prefabToSpawn != null && player != null)
+        {
+            Vector3 spawnPosition = new Vector3(player.position.x + spawnDistanceX, player.position.y, player.position.z);
+            GameObject spawnedObject = Instantiate(prefabToSpawn, spawnPosition, Quaternion.identity);
+
+            BranchCollisionDetector branchCollisionDetector = spawnedObject.GetComponent<BranchCollisionDetector>();
+            if (branchCollisionDetector != null && animator != null)
+            {
+                branchCollisionDetector.animator = animator;
+            }
+        }
+        else
+        {
+            Debug.LogError("Prefab or Player are not assigned");
+        }
+    }
 }
