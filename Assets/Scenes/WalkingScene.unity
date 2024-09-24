@@ -7993,9 +7993,9 @@ MonoBehaviour:
   HealthBar: {fileID: 1008504973}
   animator: {fileID: 2114834401}
   player: {fileID: 2114834406}
+  winRoundPrefab: {fileID: 4769937728281149654, guid: bac5d4374f2d16f439a52e68199d5173, type: 3}
   loseRoundPrefab: {fileID: 8207654846928681783, guid: 10728a857c34c024ba46c75a820f20da, type: 3}
   loseGamePrefab: {fileID: 5986916407575342737, guid: 12e105cb5e00817468fc1701a59257da, type: 3}
-  winRoundPrefab: {fileID: 4769937728281149654, guid: bac5d4374f2d16f439a52e68199d5173, type: 3}
   spawnDistanceX: 6
 --- !u!1 &1617219307
 GameObject:
