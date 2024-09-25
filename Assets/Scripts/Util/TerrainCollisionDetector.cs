@@ -12,6 +12,8 @@ public class TerrainCollisionDetector : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("test");
+
             // Deactivate previous terrain and return it to the pool
             if (previousTerrain != null)
             {
@@ -23,18 +25,18 @@ public class TerrainCollisionDetector : MonoBehaviour
             currentTerrain = nextTerrain; // Update current terrain
 
             // Generate the next terrain
-            nextTerrain = pooler.GetNextTerrain(); // Get the new terrain
+            GameObject pooledTerrain = pooler.GetNextTerrain(); // Get the new terrain
 
             // Check if nextTerrain is valid
-            if (nextTerrain != null)
+            if (pooledTerrain != null)
             {
-                nextTerrain.SetActive(true); // Activate the new terrain
+                pooledTerrain.SetActive(true); // Activate the new terrain
 
                 // Position the new terrain correctly
-                nextTerrain.transform.position = currentTerrain.transform.position + new Vector3(terrainLength, 0, 0);
+                pooledTerrain.transform.position = nextTerrain.transform.position + new Vector3(terrainLength, 0, 0);
 
                 // Update the terrain references in the new terrain
-                TerrainCollisionDetector newTerrainDetector = nextTerrain.GetComponent<TerrainCollisionDetector>();
+                TerrainCollisionDetector newTerrainDetector = pooledTerrain.GetComponent<TerrainCollisionDetector>();
                 if (newTerrainDetector != null)
                 {
                     newTerrainDetector.pooler = pooler;
