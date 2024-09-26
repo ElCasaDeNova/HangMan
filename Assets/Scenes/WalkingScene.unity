@@ -3852,7 +3852,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4398581088745354680, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.38
+      value: -33
       objectReference: {fileID: 0}
     - target: {fileID: 4398581088745354680, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7867,6 +7867,7 @@ MonoBehaviour:
   - {fileID: 4284223163061683131, guid: 10d0083b52d070646959dd2e689a9c09, type: 3}
   - {fileID: 4708269894284735538, guid: e360b416b04fcea47bd8e6a36e71df56, type: 3}
   - {fileID: 4619038135971179918, guid: fe3d81beca020a440b04db9f6c1f6670, type: 3}
+  - {fileID: 2437986767308879473, guid: 50ec50f2a1f94d44c809e6736a8da7db, type: 3}
   poolSize: 20
 --- !u!1 &1566172389
 GameObject:
@@ -10590,7 +10591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8981650279819302467, guid: 10d0083b52d070646959dd2e689a9c09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -8.543442
+      value: -8.5
       objectReference: {fileID: 0}
     - target: {fileID: 8981650279819302467, guid: 10d0083b52d070646959dd2e689a9c09, type: 3}
       propertyPath: m_LocalPosition.y
