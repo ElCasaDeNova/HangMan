@@ -7861,7 +7861,8 @@ MonoBehaviour:
   terrainPrefabs:
   - {fileID: 8852743302274539584, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
   - {fileID: 4284223163061683131, guid: 10d0083b52d070646959dd2e689a9c09, type: 3}
-  poolSize: 2
+  - {fileID: 4708269894284735538, guid: e360b416b04fcea47bd8e6a36e71df56, type: 3}
+  poolSize: 10
 --- !u!1 &1566172389
 GameObject:
   m_ObjectHideFlags: 0
