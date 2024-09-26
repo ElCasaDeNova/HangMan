@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class TerrainCollisionDetector : MonoBehaviour
 {
-    public TerrainPooler pooler;
-    public GameObject previousTerrain;
-    public GameObject currentTerrain;
-    public GameObject nextTerrain;
-    public float terrainLength = 21f;
+    [SerializeField]
+    private TerrainPooler pooler;
+    [SerializeField]
+    private GameObject previousTerrain;
+    [SerializeField]
+    private GameObject currentTerrain;
+    [SerializeField]
+    private GameObject nextTerrain;
+    [SerializeField]
+    private float terrainLength = 21f;
 
     private void OnTriggerEnter(Collider other)
     {

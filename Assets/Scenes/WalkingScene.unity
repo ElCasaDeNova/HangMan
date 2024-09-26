@@ -1192,6 +1192,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1531052240}
     - target: {fileID: 1970752742180486526, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: terrainLength
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 1970752742180486526, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       propertyPath: currentTerrain
       value: 
       objectReference: {fileID: 1309152858}
@@ -1201,7 +1205,7 @@ PrefabInstance:
       objectReference: {fileID: 1822656831}
     - target: {fileID: 4398581088745354680, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.456558
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 4398581088745354680, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3848,7 +3852,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4398581088745354680, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -29.543442
+      value: -33.38
       objectReference: {fileID: 0}
     - target: {fileID: 4398581088745354680, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       propertyPath: m_LocalPosition.y
@@ -7862,7 +7866,8 @@ MonoBehaviour:
   - {fileID: 8852743302274539584, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
   - {fileID: 4284223163061683131, guid: 10d0083b52d070646959dd2e689a9c09, type: 3}
   - {fileID: 4708269894284735538, guid: e360b416b04fcea47bd8e6a36e71df56, type: 3}
-  poolSize: 10
+  - {fileID: 4619038135971179918, guid: fe3d81beca020a440b04db9f6c1f6670, type: 3}
+  poolSize: 20
 --- !u!1 &1566172389
 GameObject:
   m_ObjectHideFlags: 0
