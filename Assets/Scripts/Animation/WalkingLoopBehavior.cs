@@ -7,6 +7,7 @@ public class WalkingLoopBehaviour : StateMachineBehaviour
     {
         // Fix Axe Y Rotation to 90
         Vector3 currentRotation = animator.transform.rotation.eulerAngles;
-        animator.transform.rotation = Quaternion.Euler(currentRotation.x, 90, currentRotation.z);
+        animator.transform.rotation = Quaternion.Euler(currentRotation.x, 90f, currentRotation.z);
+        animator.transform.position = new Vector3(animator.transform.position.x, 1.5f, 6f);
     }
 }
