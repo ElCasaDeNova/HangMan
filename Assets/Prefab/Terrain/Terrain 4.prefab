@@ -3177,6 +3177,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1507784192421463823, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: m_LODs.Array.data[0].renderers.Array.data[0].renderer
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4398581088745354680, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -45.72
@@ -3258,6 +3262,14 @@ PrefabInstance:
     - {fileID: 5932099579016293310, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
     - {fileID: 1483748585000265234, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
     - {fileID: 8355273872290084607, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+    - {fileID: 1507784192400969613, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+    - {fileID: 6246237011760586443, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+    - {fileID: 5582182087744379695, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+    - {fileID: 1428841016958448443, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+    - {fileID: 4472871928280773516, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+    - {fileID: 3187644379129460887, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+    - {fileID: 2134376063197939374, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+    - {fileID: 6913918357444517467, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4398581088745354680, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       insertIndex: -1
