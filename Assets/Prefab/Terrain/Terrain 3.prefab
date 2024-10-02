@@ -1243,6 +1243,38 @@ PrefabInstance:
       propertyPath: m_LODs.Array.data[0].renderers.Array.data[0].renderer
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 8053723922953047803, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.542
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053723922953047803, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.26998514
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053723922953047803, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.2441651
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053723922953047803, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.9305419
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053723922953047803, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.039791584
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053723922953047803, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 11.882
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053723922953047803, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -209.578
+      objectReference: {fileID: 0}
+    - target: {fileID: 8053723922953047803, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 26.257
+      objectReference: {fileID: 0}
     - target: {fileID: 8852743302274539584, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       propertyPath: m_Name
       value: Terrain 3
@@ -1292,6 +1324,7 @@ PrefabInstance:
     - {fileID: 5939942113096498853, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
     - {fileID: 6246237011760586443, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
     - {fileID: 1507784192400969613, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
+    - {fileID: 6938669535986605200, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4398581088745354680, guid: 484cdf48a1235f14882b345dcf7bfa8a, type: 3}
       insertIndex: -1
