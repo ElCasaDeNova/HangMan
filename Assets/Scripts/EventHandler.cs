@@ -204,7 +204,7 @@ public class EventHandler : MonoBehaviour
         DisableButtons();
 
         // Generate Lose Game Animation Interaction
-        SpawnObject(loseGamePrefab, "LoseGame", spawnDistanceX+4);
+        SpawnObject(loseGamePrefab, "LoseGame", spawnDistanceX+3);
 
         UpdateScreen("Game Over");
     }
