@@ -60,9 +60,22 @@ public class EventHandler : MonoBehaviour
     [SerializeField] private GameObject loseGamePrefab;
     [SerializeField] private float spawnDistanceX = 6f;
 
+    // For Sound
+    private AudioSource audioSource;
+    [SerializeField]
+    private AudioClip goodAnswerSound;
+    [SerializeField]
+    private AudioClip winRoundSound;
+    [SerializeField]
+    private AudioClip badAnswerSound;
+    [SerializeField]
+    private AudioClip loseRoundSound;
+
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
+
         // Adapt Spacing
         if (wordDisplayText != null)
         {
@@ -91,6 +104,9 @@ public class EventHandler : MonoBehaviour
     private void GoodAnswer(char letter)
     {
         Debug.Log("Good Answer");
+
+        PlaySound(goodAnswerSound);
+
         // Get A list of each position of the letter in the word
         List<int> positions = FindAllIndexes(wordToGuess, letter);
 
@@ -120,6 +136,8 @@ public class EventHandler : MonoBehaviour
     {
         Debug.Log("Wrong Answer");
         chancesLeft--;
+
+        PlaySound(badAnswerSound);
 
         // If too many errors
         if (chancesLeft <= 0)
@@ -193,6 +211,8 @@ public class EventHandler : MonoBehaviour
     {
         DisableButtons();
 
+        PlaySound(goodAnswerSound, 1.1f);
+
         // Generate Win Round Animation Interaction
         SpawnObject(winRoundPrefab, "WinRound", spawnDistanceX);
 
@@ -204,7 +224,7 @@ public class EventHandler : MonoBehaviour
         DisableButtons();
 
         // Generate Lose Game Animation Interaction
-        SpawnObject(loseGamePrefab, "LoseGame", spawnDistanceX+3);
+        SpawnObject(loseGamePrefab, "LoseGame", spawnDistanceX + 3);
 
         UpdateScreen("Game Over");
     }
@@ -321,5 +341,10 @@ public class EventHandler : MonoBehaviour
         {
             Debug.LogError("Prefab or Player are not assigned");
         }
+    }
+
+    void PlaySound(AudioClip audioClip, float newPitch=1) {
+        audioSource.PlayOneShot(audioClip);
+        audioSource.pitch = newPitch;
     }
 }

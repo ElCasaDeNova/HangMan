@@ -12,9 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wood
       objectReference: {fileID: 0}
+    - target: {fileID: 1248530000129448, guid: 2075b381986fe374eace8c512b3df68d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1776229377299498, guid: 2075b381986fe374eace8c512b3df68d, type: 3}
       propertyPath: m_Name
-      value: Wood2 Variant
+      value: Wood 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776229377299498, guid: 2075b381986fe374eace8c512b3df68d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 4068539977645094, guid: 2075b381986fe374eace8c512b3df68d, type: 3}
       propertyPath: m_LocalPosition.x

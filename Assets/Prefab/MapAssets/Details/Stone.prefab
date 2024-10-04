@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1543425785733042441, guid: fa49780d69ffa22458b5c1597ec03cf2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 1685838987906841890, guid: fa49780d69ffa22458b5c1597ec03cf2, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.60225
@@ -60,9 +64,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5507411614420996786, guid: fa49780d69ffa22458b5c1597ec03cf2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807662240723454525, guid: fa49780d69ffa22458b5c1597ec03cf2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6316584250522591917, guid: fa49780d69ffa22458b5c1597ec03cf2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 9145016715064543367, guid: fa49780d69ffa22458b5c1597ec03cf2, type: 3}
       propertyPath: m_Name
-      value: Stone Variant
+      value: Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 9145016715064543367, guid: fa49780d69ffa22458b5c1597ec03cf2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -60,6 +60,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 11.035
       objectReference: {fileID: 0}
+    - target: {fileID: -6344454563450941257, guid: 833952be7cb6e6449936755e83c58b33, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -6216822510404180702, guid: 833952be7cb6e6449936755e83c58b33, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -4788846461268660916, guid: 833952be7cb6e6449936755e83c58b33, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -92,6 +100,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MushRoomTree 3
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 833952be7cb6e6449936755e83c58b33, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4783405911661481501, guid: 833952be7cb6e6449936755e83c58b33, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -116,6 +128,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 2cd87a9b6af3b3a4f92404265bb78cb5, type: 2}
+    - target: {fileID: 7770001801561914839, guid: 833952be7cb6e6449936755e83c58b33, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

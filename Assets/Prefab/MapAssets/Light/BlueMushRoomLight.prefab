@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &6348509603340051451
 Transform:
@@ -154,6 +154,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -0.815
       objectReference: {fileID: 0}
+    - target: {fileID: -5365949894285169726, guid: 5137cb515afe8304c8882db06c1eb69a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: -4241052995424246941, guid: 5137cb515afe8304c8882db06c1eb69a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: -3574031628262424897, guid: 5137cb515afe8304c8882db06c1eb69a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -166,6 +174,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlueMushRoomLight
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5137cb515afe8304c8882db06c1eb69a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 972125941568522024, guid: 5137cb515afe8304c8882db06c1eb69a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 231
@@ -174,10 +186,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -35.8
       objectReference: {fileID: 0}
+    - target: {fileID: 1319648730747250577, guid: 5137cb515afe8304c8882db06c1eb69a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2211603234644381724, guid: 5137cb515afe8304c8882db06c1eb69a, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e8e6850530e3b6a4e839140fe22cd162, type: 2}
+    - target: {fileID: 3379836402047742272, guid: 5137cb515afe8304c8882db06c1eb69a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 3779745573541866595, guid: 5137cb515afe8304c8882db06c1eb69a, type: 3}

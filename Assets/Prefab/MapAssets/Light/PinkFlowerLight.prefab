@@ -12,6 +12,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: PinkFlowerLight
       objectReference: {fileID: 0}
+    - target: {fileID: 302172256694181169, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 431653405886202157, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 470027333614840107, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 1772734757204962931, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3570891809152408064, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 4045412730525245067, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 4207676595619123437, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.035050698
@@ -64,6 +88,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5427062094872833502, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5513867513282801436, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6851736329716229061, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7252078877140614558, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
       propertyPath: m_Intensity
       value: 2
@@ -71,6 +107,10 @@ PrefabInstance:
     - target: {fileID: 7252078877140614558, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163294122772432130, guid: 3cfb9d2d687ce2346816ac013bcfbc2c, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -8,9 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2428035901774816879, guid: 4327392c4139e814fbb9ab7a24e43d18, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2776438655603551696, guid: 4327392c4139e814fbb9ab7a24e43d18, type: 3}
       propertyPath: m_Name
-      value: Flower Variant
+      value: Flower
+      objectReference: {fileID: 0}
+    - target: {fileID: 2776438655603551696, guid: 4327392c4139e814fbb9ab7a24e43d18, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3822628310097237989, guid: 4327392c4139e814fbb9ab7a24e43d18, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5158765215002786389, guid: 4327392c4139e814fbb9ab7a24e43d18, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 5745651612838056856, guid: 4327392c4139e814fbb9ab7a24e43d18, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6487961316655113409, guid: 4327392c4139e814fbb9ab7a24e43d18, type: 3}
       propertyPath: m_LocalScale.x
@@ -63,6 +83,10 @@ PrefabInstance:
     - target: {fileID: 6487961316655113409, guid: 4327392c4139e814fbb9ab7a24e43d18, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8792064696054213556, guid: 4327392c4139e814fbb9ab7a24e43d18, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &1343378858752540473
 Transform:
@@ -114,6 +114,10 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2807154637035961259, guid: 3396d24f108a1fc40aaa9fadd2b95bd3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 2868901441968099452, guid: 3396d24f108a1fc40aaa9fadd2b95bd3, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.076358885
@@ -166,9 +170,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 6.318
       objectReference: {fileID: 0}
+    - target: {fileID: 6165485195663168264, guid: 3396d24f108a1fc40aaa9fadd2b95bd3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7980772120115425353, guid: 3396d24f108a1fc40aaa9fadd2b95bd3, type: 3}
       propertyPath: m_Name
       value: RedMushRoomLight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7980772120115425353, guid: 3396d24f108a1fc40aaa9fadd2b95bd3, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

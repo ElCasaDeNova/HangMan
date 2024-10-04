@@ -62,11 +62,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4780616558733297591, guid: 41f4c0d74d9d09149bf6a881455c9838, type: 3}
       propertyPath: m_Name
-      value: MushRoomBlue Variant
+      value: MushRoomBlue
+      objectReference: {fileID: 0}
+    - target: {fileID: 4780616558733297591, guid: 41f4c0d74d9d09149bf6a881455c9838, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 9203244174414267099, guid: 41f4c0d74d9d09149bf6a881455c9838, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:

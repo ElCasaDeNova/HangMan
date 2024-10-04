@@ -10,7 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3398670416079135524, guid: 4986134004de2c646967cfee8540200f, type: 3}
       propertyPath: m_Name
-      value: MushRoomTree Variant
+      value: MushRoomTree
+      objectReference: {fileID: 0}
+    - target: {fileID: 3398670416079135524, guid: 4986134004de2c646967cfee8540200f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 3861967945799020933, guid: 4986134004de2c646967cfee8540200f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 6340836394135630755, guid: 4986134004de2c646967cfee8540200f, type: 3}
       propertyPath: m_LocalScale.x

@@ -12,9 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock4
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a4de4c4592870af498f7bc906bb4861a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: a4de4c4592870af498f7bc906bb4861a, type: 3}
       propertyPath: m_Name
       value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: a4de4c4592870af498f7bc906bb4861a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a4de4c4592870af498f7bc906bb4861a, type: 3}
       propertyPath: m_LocalPosition.x
