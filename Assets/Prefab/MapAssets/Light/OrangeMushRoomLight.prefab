@@ -293,6 +293,10 @@ PrefabInstance:
       value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 8811556831358316143, guid: 52a53e8c0718ade4cbf4b6800ee118a1, type: 3}
+      propertyPath: m_Lightmapping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811556831358316143, guid: 52a53e8c0718ade4cbf4b6800ee118a1, type: 3}
       propertyPath: m_Shadows.m_Type
       value: 2
       objectReference: {fileID: 0}
