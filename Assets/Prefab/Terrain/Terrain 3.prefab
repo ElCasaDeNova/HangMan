@@ -1,5 +1,55 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2387812256111198631
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1048231594527673627}
+  - component: {fileID: 7063534483604331246}
+  m_Layer: 0
+  m_Name: Light Probe Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1048231594527673627
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387812256111198631}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 892693977396599655}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!220 &7063534483604331246
+LightProbeGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2387812256111198631}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 5.178403, y: 4.3284583, z: 1.3549839}
+  - {x: 4.105887, y: 4.62449, z: -0.73613316}
+  - {x: 5.2493567, y: -1, z: 1.361012}
+  - {x: 6.5929456, y: -1, z: -0.5248404}
+  - {x: -3.3177702, y: 4.546665, z: 0.8030895}
+  - {x: -3.7313507, y: 5.0344534, z: -1.232047}
+  - {x: -4.54648, y: -0.90050507, z: 0.6987018}
+  - {x: -4.8249044, y: -1, z: -1.324951}
+  m_Dering: 1
 --- !u!1001 &138534472879190190
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -132,7 +182,10 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 4ce51eb900a3afd4483a1cc323703db3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f9353a7e76f984948b3cc54488a247c0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1048231594527673627}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f9353a7e76f984948b3cc54488a247c0, type: 3}
       insertIndex: -1
