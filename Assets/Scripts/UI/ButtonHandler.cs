@@ -11,7 +11,7 @@ public class ButtonHandler : MonoBehaviour
     private char letter;
 
     [SerializeField]
-    private EventHandler eventHandler;
+    private GameplayHandler gameplayHandler;
 
     private TMP_Text buttonText;
 
@@ -29,6 +29,6 @@ public class ButtonHandler : MonoBehaviour
     {
         // DisableButton
         guessButton.interactable = false;
-        eventHandler.Guess(letter);
+        gameplayHandler.Guess(letter);
     }
 }

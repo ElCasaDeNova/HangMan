@@ -102298,14 +102298,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0.75
-    functionName: JumpStart
+    functionName: MaleEffortUp
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.75
-    functionName: JumpEnd
+    functionName: MaleEffortDown
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.8833333
+    functionName: Step
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

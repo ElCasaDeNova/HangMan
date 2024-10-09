@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class EventHandler : MonoBehaviour
+public class GameplayHandler : MonoBehaviour
 {
 
     [SerializeField]
