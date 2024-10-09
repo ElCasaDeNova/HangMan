@@ -7537,6 +7537,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 5.823173e-15
       objectReference: {fileID: 0}
+    - target: {fileID: 6815554565503856527, guid: 63586c4395ca1aa44ae1cade2974a841, type: 3}
+      propertyPath: laughOne
+      value: 
+      objectReference: {fileID: 8300000, guid: 145425dffbda40e46a6d9f34dcc14837, type: 3}
+    - target: {fileID: 6815554565503856527, guid: 63586c4395ca1aa44ae1cade2974a841, type: 3}
+      propertyPath: laughTwo
+      value: 
+      objectReference: {fileID: 8300000, guid: de7cf57591e49bb42a955dd5f8d75d68, type: 3}
+    - target: {fileID: 6815554565503856527, guid: 63586c4395ca1aa44ae1cade2974a841, type: 3}
+      propertyPath: laughOneVolume
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6815554565503856527, guid: 63586c4395ca1aa44ae1cade2974a841, type: 3}
+      propertyPath: laughTwoVolume
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 6993351658289927494, guid: 63586c4395ca1aa44ae1cade2974a841, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -12.238875
@@ -7957,6 +7973,9 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5065275899278926089, guid: 63586c4395ca1aa44ae1cade2974a841, type: 3}
       insertIndex: -1
+      addedObject: {fileID: 6685353454906053386}
+    - targetCorrespondingSourceObject: {fileID: 5065275899278926089, guid: 63586c4395ca1aa44ae1cade2974a841, type: 3}
+      insertIndex: -1
       addedObject: {fileID: 3440433638813274081}
   m_SourcePrefab: {fileID: 100100000, guid: 63586c4395ca1aa44ae1cade2974a841, type: 3}
 --- !u!1 &1661126646168929460 stripped
@@ -7964,6 +7983,102 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5065275899278926089, guid: 63586c4395ca1aa44ae1cade2974a841, type: 3}
   m_PrefabInstance: {fileID: 5856641550562092477}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &6685353454906053386
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661126646168929460}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 5320652311773462087, guid: 474f07e8a5255154ba4872a6a724e7ca, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &3440433638813274081
 Animator:
   serializedVersion: 5

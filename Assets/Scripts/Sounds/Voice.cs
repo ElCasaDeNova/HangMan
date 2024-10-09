@@ -22,13 +22,13 @@ public class Voice : MonoBehaviour
 
     void MaleEffortUp()
     {
-        SetAudioSource(maleEffortsUpVolume, maleEffortsUpPitch); 
+        SetAudioSource(maleEffortsUpVolume, maleEffortsUpPitch);
         audioSource.PlayOneShot(maleEffortsUp);
     }
 
     void MaleEffortDown()
     {
-        SetAudioSource(maleEffortsDownVolume, maleEffortsDownPitch); 
+        SetAudioSource(maleEffortsDownVolume, maleEffortsDownPitch);
         audioSource.PlayOneShot(maleEffortsDown);
     }
     void Sigh()

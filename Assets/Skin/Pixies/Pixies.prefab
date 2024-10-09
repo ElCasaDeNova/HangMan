@@ -5167,6 +5167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1849214594395851005}
+  - component: {fileID: 6815554565503856527}
   m_Layer: 0
   m_Name: Pixies
   m_TagString: Untagged
@@ -5190,6 +5191,24 @@ Transform:
   - {fileID: 1517992372507243898}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6815554565503856527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5065275899278926089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a51c94b9ea3e8f24fb60f5dd641be889, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laughOne: {fileID: 0}
+  laughOneVolume: 1
+  laughOnePitch: 2
+  laughTwo: {fileID: 0}
+  laughTwoVolume: 1
+  laughTwoPitch: 2
 --- !u!1 &5113094750154969158
 GameObject:
   m_ObjectHideFlags: 0

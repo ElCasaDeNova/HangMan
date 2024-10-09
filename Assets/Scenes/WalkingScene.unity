@@ -8963,10 +8963,7 @@ PrefabInstance:
       objectReference: {fileID: 9100000, guid: bb448200be7f7f44faf72f6a83fd31f8, type: 2}
     - target: {fileID: 5866666021909216657, guid: aa89ce8826949b64ba76d8e1a7b7ec8b, type: 3}
       propertyPath: m_WarningMessage
-      value: "\nBinding warning: Some generic clip(s) animate transforms that are
-        already bound by a Humanoid avatar. These transforms can only be changed
-        by Humanoid clips.\n\tTransform 'mixamorig:LeftUpLeg'\n\tTransform 'mixamorig:Hips'\n\tFrom
-        animation clip 'Test'"
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5866666021909216657, guid: aa89ce8826949b64ba76d8e1a7b7ec8b, type: 3}
       propertyPath: m_ApplyRootMotion
@@ -12874,7 +12871,7 @@ MonoBehaviour:
   fallVolume: 1
   fallPitch: 1
   step: {fileID: 8300000, guid: f65c4ff197551410b9f70b804410c961, type: 3}
-  stepVolume: 0.3
+  stepVolume: 0.15
   stepPitch: 1
 --- !u!114 &2114834410
 MonoBehaviour:

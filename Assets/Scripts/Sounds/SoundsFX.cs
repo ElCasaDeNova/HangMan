@@ -13,7 +13,7 @@ public class SoundsFX : MonoBehaviour
     [SerializeField] float fallPitch = 1f;
 
     [SerializeField] AudioClip step;
-    [SerializeField] float stepVolume=0.3f;
+    [SerializeField] float stepVolume = 0.3f;
     [SerializeField] float stepPitch = 1f;
 
 
@@ -34,12 +34,15 @@ public class SoundsFX : MonoBehaviour
         audioSource.PlayOneShot(fall);
     }
 
-    void Step() {
-        SetAudioSource(stepVolume, stepPitch);
+    void Step()
+    {
+        float randomVariant = Random.Range(0.8f, 1.2f);
+        SetAudioSource(stepVolume, stepPitch * randomVariant);
         audioSource.PlayOneShot(step);
     }
 
-    void SetAudioSource(float newVolume, float newPitch) {
+    void SetAudioSource(float newVolume, float newPitch)
+    {
         audioSource.volume = newVolume;
         audioSource.pitch = newPitch;
     }
