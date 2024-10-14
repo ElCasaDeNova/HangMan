@@ -16,6 +16,8 @@ public class SettingsHandler : MonoBehaviour
     [SerializeField]
     private AudioClip audioClip;
     private AudioSource audioSource;
+    [SerializeField]
+    private float maxDBMusic = -10f;
 
     private void Start()
     {
@@ -33,12 +35,24 @@ public class SettingsHandler : MonoBehaviour
         Debug.Log("Quality Set to: " + qualityIndex);
     }
 
-    public void SetMusicVolume(float volume)
+    
+
+    public void SetMusicVolume(float scrollbarValue)
     {
-        float dBVolume = (volume > 0.0001f) ? Mathf.Log10(volume) * 20 : -80f;
+        // Convert maxDB to a linear value (for the highest allowed volume)
+        float maxLinearVolume = Mathf.Pow(10, maxDBMusic / 20f);
+
+        // The scrollbarValue should be between 0 and 1 (0 = mute, 1 = maxDB)
+        // Multiply the scrollbar value by the maxLinearVolume to get the final volume
+        float linearVolume = scrollbarValue * maxLinearVolume;
+
+        // Convert the linear volume to dB for the audio mixer
+        float dBVolume = (linearVolume > 0.0001f) ? Mathf.Log10(linearVolume) * 20 : -80f;
+
+        // Apply the volume to the audio mixer
         audioMixer.SetFloat("MusicVolume", dBVolume);
-        Debug.Log("Music Volume: " + volume);
     }
+
 
     public void SetGeneralVolume(float volume)
     {
