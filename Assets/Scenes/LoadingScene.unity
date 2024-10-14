@@ -995,6 +995,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loadingSlider: {fileID: 18887461}
   loadingBarController: {fileID: 1886931497}
+  loadingCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
