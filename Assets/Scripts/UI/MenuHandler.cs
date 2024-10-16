@@ -5,6 +5,8 @@ public class MenuHandler : MonoBehaviour
 {
     [SerializeField]
     private GameObject settingsPanel;
+    [SerializeField]
+    private GameObject menuButtons;
 
     [SerializeField]
     private AudioClip audioClip;
@@ -26,6 +28,7 @@ public class MenuHandler : MonoBehaviour
         Debug.Log("Settings Opened!");
         PlaySound();
         settingsPanel.SetActive(!settingsPanel.activeSelf);
+        menuButtons.SetActive(!menuButtons.activeSelf);
     }
 
     public void ExitGame()
