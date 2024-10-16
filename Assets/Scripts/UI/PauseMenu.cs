@@ -4,10 +4,10 @@ public class PauseMenu : MonoBehaviour
 {
     [SerializeField]
     private GameObject pauseMenu;
-
     [SerializeField]
-    private GameObject GameMenu;
-
+    private GameObject menuButtons;
+    [SerializeField]
+    private GameObject gameUI;
     [SerializeField]
     private GameObject settingsPanel;
 
@@ -47,7 +47,7 @@ public class PauseMenu : MonoBehaviour
         isPaused = true;
 
         PlaySound();
-        GameMenu.SetActive(false);  // Activate the game menu UI
+        gameUI.SetActive(false);  // Activate the game menu UI
     }
 
     public void ResumeGame()
@@ -64,7 +64,7 @@ public class PauseMenu : MonoBehaviour
             OpenSettings(); // Close Settings
         }
 
-        GameMenu.SetActive(true);  // Reactivate the game menu UI
+        gameUI.SetActive(true);  // Reactivate the game menu UI
     }
 
     public void QuitGame()
@@ -79,6 +79,7 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Settings Opened!");
         PlaySound();
         settingsPanel.SetActive(!settingsPanel.activeSelf);
+        menuButtons.SetActive(!menuButtons.activeSelf);
     }
 
     private void PlaySound()
