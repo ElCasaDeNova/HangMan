@@ -35,7 +35,7 @@ public class SettingsHandler : MonoBehaviour
         Debug.Log("Quality Set to: " + qualityIndex);
     }
 
-    
+
 
     public void SetMusicVolume(float scrollbarValue)
     {
@@ -61,7 +61,8 @@ public class SettingsHandler : MonoBehaviour
         Debug.Log("General Volume: " + volume);
     }
 
-    private void PlaySound() {
+    private void PlaySound()
+    {
         // Give variety to sound
         float randomVariant = Random.Range(0.8f, 1.2f);
         audioSource.pitch = randomVariant;

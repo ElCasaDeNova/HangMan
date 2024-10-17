@@ -7,11 +7,9 @@ public class TrollSound : MonoBehaviour
     [SerializeField] float getUpVolume = 1f;
     [SerializeField] float getUpPitch = 0.2f;
 
-
     [SerializeField] AudioClip hello;
     [SerializeField] float helloVolume = 1f;
     [SerializeField] float helloPitch = 0.2f;
-
 
     private void Start()
     {

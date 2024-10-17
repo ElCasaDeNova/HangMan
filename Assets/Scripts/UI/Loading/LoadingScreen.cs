@@ -1,7 +1,7 @@
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using System.Collections;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LoadingScreen : MonoBehaviour
 {
@@ -10,7 +10,7 @@ public class LoadingScreen : MonoBehaviour
     [SerializeField]
     private LoadingBarController loadingBarController;
 
-    [SerializeField] 
+    [SerializeField]
     private AnimationCurve loadingCurve;
 
     private void Start()

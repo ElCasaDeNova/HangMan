@@ -343,11 +343,12 @@ public class GameplayHandler : MonoBehaviour
         }
     }
 
-    void PlaySound(AudioClip audioClip, float newPitch=1) {
+    void PlaySound(AudioClip audioClip, float newPitch = 1)
+    {
         audioSource.PlayOneShot(audioClip);
 
         // Make different variation of the sound
         float randomVariant = Random.Range(0.8f, 1.2f);
-        audioSource.pitch = newPitch* randomVariant;
+        audioSource.pitch = newPitch * randomVariant;
     }
 }

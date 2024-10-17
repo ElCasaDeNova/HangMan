@@ -7,7 +7,6 @@ public class SoundsFX : MonoBehaviour
     [SerializeField] float hitWoodVolume = 1f;
     [SerializeField] float hitWoodPitch = 1f;
 
-
     [SerializeField] AudioClip fall;
     [SerializeField] float fallVolume = 1f;
     [SerializeField] float fallPitch = 1f;
@@ -15,7 +14,6 @@ public class SoundsFX : MonoBehaviour
     [SerializeField] AudioClip step;
     [SerializeField] float stepVolume = 0.3f;
     [SerializeField] float stepPitch = 1f;
-
 
     private void Start()
     {

@@ -27,7 +27,7 @@ public class PixieSound : MonoBehaviour
     void LaughTwo()
     {
         float randomVariant = Random.Range(0.8f, 1.2f);
-        SetAudioSource(laughTwoVolume, laughTwoPitch* randomVariant);
+        SetAudioSource(laughTwoVolume, laughTwoPitch * randomVariant);
         audioSource.PlayOneShot(laughTwo);
     }
 
