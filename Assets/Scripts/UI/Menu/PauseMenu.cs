@@ -81,6 +81,7 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Reloading Game...");
         PlaySound();
+        SceneLoader.nextScene = "WalkingScene";
         SceneManager.LoadScene("LoadingScene");
     }
 
@@ -88,7 +89,8 @@ public class PauseMenu : MonoBehaviour
     {
         Debug.Log("Returning to Menu...");
         PlaySound();
-        SceneManager.LoadScene("Menu");
+        SceneLoader.nextScene = "Menu";
+        SceneManager.LoadScene("LoadingScene");
     }
 
     public void OpenSettings()
