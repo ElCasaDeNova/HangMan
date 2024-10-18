@@ -71,6 +71,10 @@ public class GameplayHandler : MonoBehaviour
     [SerializeField]
     private AudioClip loseRoundSound;
 
+    // For Lost game
+    [SerializeField]
+    private GameObject gameUI;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -226,7 +230,8 @@ public class GameplayHandler : MonoBehaviour
         // Generate Lose Game Animation Interaction
         SpawnObject(loseGamePrefab, "LoseGame", spawnDistanceX + 3);
 
-        UpdateScreen("Game Over");
+        // Hide Game UI
+        gameUI.SetActive(false);
     }
 
     private IEnumerator LoseRoundCoroutine()

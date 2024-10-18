@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class PauseMenu : MonoBehaviour
     private GameObject menuButtons;
     [SerializeField]
     private GameObject gameUI;
+    [SerializeField]
+    private GameObject gameOverUI;
     [SerializeField]
     private GameObject settingsPanel;
 
@@ -26,8 +29,8 @@ public class PauseMenu : MonoBehaviour
 
     void Update()
     {
-        // Check if the Escape key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Check if the Escape key is pressed and game not lost
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameOverUI.activeSelf)
         {
             if (isPaused)
             {
@@ -72,6 +75,20 @@ public class PauseMenu : MonoBehaviour
         Debug.Log("Quitting the game...");
         PlaySound();
         Application.Quit();
+    }
+
+    public void Restart()
+    {
+        Debug.Log("Reloading Game...");
+        PlaySound();
+        SceneManager.LoadScene("LoadingScene");
+    }
+
+    public void ReturnToMenu()
+    {
+        Debug.Log("Returning to Menu...");
+        PlaySound();
+        SceneManager.LoadScene("Menu");
     }
 
     public void OpenSettings()
