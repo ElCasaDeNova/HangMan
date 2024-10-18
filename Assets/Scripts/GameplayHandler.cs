@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameplayHandler : MonoBehaviour
@@ -127,7 +128,7 @@ public class GameplayHandler : MonoBehaviour
             // Verify Winning Condition
             if (currentlistOfWords.Count <= 0)
             {
-                StartCoroutine(WinGameCoroutine());
+                WinGameCoroutine();
             }
             else
             {
@@ -162,7 +163,7 @@ public class GameplayHandler : MonoBehaviour
                 // Verify Winning Condition
                 if (currentlistOfWords.Count <= 0)
                 {
-                    StartCoroutine(WinGameCoroutine());
+                    WinGameCoroutine();
                 }
                 else
                 {
@@ -198,17 +199,10 @@ public class GameplayHandler : MonoBehaviour
         StartCoroutine(ShowRoundAndThenWord());
     }
 
-    private IEnumerator WinGameCoroutine()
+    private void WinGameCoroutine()
     {
         DisableButtons();
-
-        // Run Animation
-        animator.SetTrigger("WinGame");
-
-        UpdateScreen("VICTORY");
-        yield return new WaitForSeconds(waitWinTime); // in seconds
-
-        // TODO Load Next Scene
+        SceneManager.LoadScene("VictoryScene");
     }
 
     private void WinRound()
