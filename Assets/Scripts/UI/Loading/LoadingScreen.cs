@@ -15,7 +15,7 @@ public class LoadingScreen : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(LoadGameAsync("WalkingScene"));  // Start loading the scene asynchronously
+        StartCoroutine(LoadGameAsync(SceneLoader.nextScene));  // Start loading the scene asynchronously
     }
 
     private IEnumerator LoadGameAsync(string sceneName)

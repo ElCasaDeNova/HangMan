@@ -202,7 +202,8 @@ public class GameplayHandler : MonoBehaviour
     private void WinGameCoroutine()
     {
         DisableButtons();
-        SceneManager.LoadScene("VictoryScene");
+        SceneLoader.nextScene = "VictoryScene";
+        SceneManager.LoadScene("LoadingScene");
     }
 
     private void WinRound()

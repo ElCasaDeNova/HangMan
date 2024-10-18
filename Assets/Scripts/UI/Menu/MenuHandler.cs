@@ -20,6 +20,7 @@ public class MenuHandler : MonoBehaviour
     public void PlayGame()
     {
         PlaySound();
+        SceneLoader.nextScene = "WalkingScene";
         SceneManager.LoadScene("LoadingScene");
     }
 
