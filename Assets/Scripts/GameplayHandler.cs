@@ -72,6 +72,10 @@ public class GameplayHandler : MonoBehaviour
     [SerializeField]
     private AudioClip loseRoundSound;
 
+    // For Settings
+    [SerializeField]
+    private SettingsHandler settingsHandler;
+
     // For Lost game
     [SerializeField]
     private GameObject gameUI;

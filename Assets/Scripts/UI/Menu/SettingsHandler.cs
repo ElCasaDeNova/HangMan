@@ -22,44 +22,52 @@ public class SettingsHandler : MonoBehaviour
     private void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        qualityDropdown.value = QualitySettings.GetQualityLevel();
+
+        // Get PlayerRef value or default (used one)
+        int storedQualityIndex = PlayerPrefs.GetInt("QualityIndex", QualitySettings.GetQualityLevel());
+        // Get PlayerRef value or default
+        float storedMusicVolume = PlayerPrefs.GetFloat("MusicVolume", 1f);
+        float storedGeneralVolume = PlayerPrefs.GetFloat("GeneralVolume", 1f);
+
+        // Apply value to dropdown List
+        qualityDropdown.value = storedQualityIndex;
+        // Apply values to scrollbars
+        musicVolumeScrollbar.value = storedMusicVolume;
+        generalVolumeScrollbar.value = storedGeneralVolume;
 
         qualityDropdown.onValueChanged.AddListener(SetQuality);
         musicVolumeScrollbar.onValueChanged.AddListener(SetMusicVolume);
         generalVolumeScrollbar.onValueChanged.AddListener(SetGeneralVolume);
     }
+
     public void SetQuality(int qualityIndex)
     {
         PlaySound();
         QualitySettings.SetQualityLevel(qualityIndex);
-        Debug.Log("Quality Set to: " + qualityIndex);
+        PlayerPrefs.SetInt("QualityIndex", qualityIndex);
+        PlayerPrefs.Save();
     }
-
-
 
     public void SetMusicVolume(float scrollbarValue)
     {
-        // Convert maxDB to a linear value (for the highest allowed volume)
         float maxLinearVolume = Mathf.Pow(10, maxDBMusic / 20f);
-
-        // The scrollbarValue should be between 0 and 1 (0 = mute, 1 = maxDB)
-        // Multiply the scrollbar value by the maxLinearVolume to get the final volume
         float linearVolume = scrollbarValue * maxLinearVolume;
-
-        // Convert the linear volume to dB for the audio mixer
         float dBVolume = (linearVolume > 0.0001f) ? Mathf.Log10(linearVolume) * 20 : -80f;
-
-        // Apply the volume to the audio mixer
         audioMixer.SetFloat("MusicVolume", dBVolume);
-    }
 
+        PlayerPrefs.SetFloat("MusicVolume", scrollbarValue);
+        PlayerPrefs.Save();
+    }
 
     public void SetGeneralVolume(float volume)
     {
         float dBVolume = (volume > 0.0001f) ? Mathf.Log10(volume) * 20 : -80f;
         audioMixer.SetFloat("GeneralVolume", dBVolume);
-        Debug.Log("General Volume: " + volume);
+
+        PlayerPrefs.SetFloat("GeneralVolume", volume);
+        PlayerPrefs.Save();
     }
+
 
     private void PlaySound()
     {
@@ -71,4 +79,5 @@ public class SettingsHandler : MonoBehaviour
         // Set to default
         audioSource.pitch = 1;
     }
+
 }
