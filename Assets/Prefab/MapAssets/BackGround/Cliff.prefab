@@ -12,6 +12,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: b82f43319bb1242489563afe8c25f073, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: b82f43319bb1242489563afe8c25f073, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: b82f43319bb1242489563afe8c25f073, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: b82f43319bb1242489563afe8c25f073, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: b82f43319bb1242489563afe8c25f073, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b82f43319bb1242489563afe8c25f073, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.162632

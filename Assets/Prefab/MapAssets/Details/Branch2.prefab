@@ -12,9 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Branch
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 744c3b04302b8ee4a87141fe6ab5a8fa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100006, guid: 744c3b04302b8ee4a87141fe6ab5a8fa, type: 3}
       propertyPath: m_Name
       value: Branch2
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 744c3b04302b8ee4a87141fe6ab5a8fa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 744c3b04302b8ee4a87141fe6ab5a8fa, type: 3}
       propertyPath: m_LocalPosition.x

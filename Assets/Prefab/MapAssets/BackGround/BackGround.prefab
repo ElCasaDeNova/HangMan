@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackGround
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6e8dd1c24e654da43bd6b7f757054434, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6e8dd1c24e654da43bd6b7f757054434, type: 3}
       propertyPath: m_LocalScale.x
       value: 404.39185

@@ -12,9 +12,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sticks
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 9d46357c965d469419e64e92d19eb9bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 100014, guid: 9d46357c965d469419e64e92d19eb9bf, type: 3}
       propertyPath: m_Name
       value: Stick
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: 9d46357c965d469419e64e92d19eb9bf, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: 9d46357c965d469419e64e92d19eb9bf, type: 3}
       propertyPath: m_LocalScale.x

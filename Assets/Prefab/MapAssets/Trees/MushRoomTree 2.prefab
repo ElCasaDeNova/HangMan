@@ -64,9 +64,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5918396052472769242, guid: debacc273d1dc014f94cf261f0285382, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 6012304789740250123, guid: debacc273d1dc014f94cf261f0285382, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 7730699888228876452, guid: debacc273d1dc014f94cf261f0285382, type: 3}
       propertyPath: m_Name
-      value: MushRoomTree 2 Variant
+      value: MushRoomTree 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7730699888228876452, guid: debacc273d1dc014f94cf261f0285382, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8869128090757627072, guid: debacc273d1dc014f94cf261f0285382, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

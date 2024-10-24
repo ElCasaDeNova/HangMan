@@ -12,6 +12,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cliff 2
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6a9d5445bba25a542ae75e7f4f29e03f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 6a9d5445bba25a542ae75e7f4f29e03f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: 6a9d5445bba25a542ae75e7f4f29e03f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: 6a9d5445bba25a542ae75e7f4f29e03f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: 6a9d5445bba25a542ae75e7f4f29e03f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: 6a9d5445bba25a542ae75e7f4f29e03f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: 6a9d5445bba25a542ae75e7f4f29e03f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6a9d5445bba25a542ae75e7f4f29e03f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.015412
